@@ -176,7 +176,8 @@ class SW_Dataset(Dataset):
     def __getitem__(self, index):
         ### Training in paper is 256 but now data is 512 so we downsample.
 
-        #        AIA_sample = np.asarray( [np.load(channel.replace('fits.',''))['x'] for channel in self.index_aia[index, :]], dtype = np.float32 )
+        # AIA_sample = np.asarray( [np.load(channel.replace('fits.',''))['x'] for channel in self.index_aia[index, :]], dtype = np.float32 )
+        # X.shape == (9, 512, 512) // 9 Wavelengths x (512x512 image)
         AIA_sample = np.asarray(
             [
                 np.expand_dims(np.load(channel.replace("fits.", ""))["x"], axis=0)

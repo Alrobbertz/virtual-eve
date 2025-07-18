@@ -60,9 +60,9 @@ We first need to fit a linear model to output the 15 channels of EVE from the me
 
 - [X] In canonical_code/ run `python setup_residual_totirr --base experimental_data_folder/`. This will fit a linear model using means and stds of AIA images and a Huber loss, then save the means and stds as well as the model.
 
-- In canonical_code/, run "python cfg_residual_unified_train_totirr.py --src path_to_config_files/ --data_root experimental_data_folder/ --target path_to_train_results_folder/". This will read the configuration JSON file, create the specified model using the specified parameters, and train it. It will save train and val losses as well as best performing model into the --target folder.
+- [X] In canonical_code/, run `python cfg_residual_unified_train_totirr.py --src path_to_config_files/ --data_root experimental_data_folder/ --target path_to_train_results_folder/`. This will read the configuration JSON file, create the specified model using the specified parameters, and train it. It will save train and val losses as well as best performing model into the --target folder.
 
-- To test the model, run "python cfg_residual_unified_test_totirr.py --src path_to_config_files/ --models path_to_train_results_folder/ --data_root experimental_data_folder/ --target path_to_test_results_folder/ --eve_root clean_data_folder/EVE/np/ --phase test". This will generate a text file with errors on the test set (or on whichever --phase you specified).
+- [X] To test the model, run `python cfg_residual_unified_test_totirr.py --src path_to_config_files/ --models path_to_train_results_folder/ --data_root experimental_data_folder/ --target path_to_test_results_folder/ --eve_root clean_data_folder/EVE/np/ --phase test`. This will generate a text file with errors on the test set (or on whichever --phase you specified).
 
 ## Use the model for inference
 

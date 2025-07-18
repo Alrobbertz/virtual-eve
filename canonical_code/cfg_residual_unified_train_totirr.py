@@ -18,7 +18,6 @@ import argparse
 import copy
 import json
 import os
-import pdb
 import random
 import sys
 import time
@@ -32,15 +31,6 @@ import torchvision
 from SW_Dataset_bakeoff_totirr import *
 from torch.optim import lr_scheduler
 from torchvision import models, transforms
-
-
-### just to helper to create net directories in results/
-def createFolder(directory):
-    try:
-        if not os.path.exists(directory):
-            os.makedirs(directory)
-    except OSError:
-        print("Error: Creating directory. " + directory)
 
 
 ### helper training function.
